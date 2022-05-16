@@ -1,0 +1,58 @@
+INDEX.HTML
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Parcel Sandbox</title>
+	<meta charset="UTF-8" />
+</head>
+
+<body>
+	<div id="app"></div>
+
+	<script src="src/index.js">
+	</script>
+</body>
+
+</html>
+
+
+
+INDEX.JS
+class Car {
+    constructor(cname, speed, charge) {
+	this.cname = cname;
+	this.speed = speed;
+  this.charge = charge;
+	// Accelerate function
+	this.accelerate = function() {
+	this.speed += 20;
+  this.charge -= 1;
+	};
+	// Brake function
+	this.brake = function() {
+	this.speed -= 5;
+  this.charge -= 1;
+	};
+    };
+	get speeds() {
+	let currentspeed = this.speed / 1.6;
+	return currentspeed + " mi/h";
+	}
+	get speedJS() {
+	let current = this.speed / 1.6;
+	let currentspeed = current * 1.6;
+	return currentspeed + " mi/h";
+	}
+};
+
+let Innov = new Car('Innov', 120, 90);
+
+Innov.accelerate(); // Accelerate 
+Innov.brake(); // Brake
+console.log(Innov);
+
+body {
+  font-family: sans-serif;
+}
+STYLE.CSS
